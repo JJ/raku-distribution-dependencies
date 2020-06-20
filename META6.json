@@ -9,7 +9,7 @@
   "name" : "",
   "perl" : "6.d",
   "provides" : {
-    "Distribution::Dependencies": "lib/Distribution/Depencencices.rakumod"
+    "Distribution::Dependencies": "lib/Distribution/Dependencies.rakumod"
   },
   "resources" : [ ],
   "source-url" : "",
