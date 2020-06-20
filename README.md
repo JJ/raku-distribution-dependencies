@@ -10,7 +10,11 @@ Just the usual
 
 ## Running
 
-<-- Some examples, or pointing to a directory with them -->
+```
+cd raku-some-distro
+
+
+```
 
 ## See also
 
