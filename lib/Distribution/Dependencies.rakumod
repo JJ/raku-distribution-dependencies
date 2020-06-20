@@ -10,7 +10,7 @@ unit module Distribution::Dependencies;
             for $meta6<provides>.values -> $p {
                 my @lines = "$dir/$p".IO.lines.grep(/^^ \s* ["use" | "need"]/);
                 for @lines -> $l {
-                   $l ~~ / ["use" | "need" ] \s+ $<module> = (\S+) ";" /;
+                   $l ~~ / ["use" | "need" ] \s+ $<module> = (\S+) [";" | \s+] /;
                    my $module-name = ~$<module>;
                    next if $module-name ∈ @excluded
                            || $module-name ∈ $meta6<provides>.keys
