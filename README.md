@@ -1,14 +1,12 @@
-# Raku Distribution Template
+# Raku Distribution Dependencies
 
-Template for Raku modules, classes, roles, to be distributed as a
-single package in the ecosystem. Fill this README with your
-instructions.
+Find the real dependencies used in a distribution, and act on them.
 
 ## Installing
 
+Just the usual
 
-<-- Fill your prerequisites here, how to install using zef, how to
-install from source -->
+    zef install Distribution::Dependencies
 
 ## Running
 
