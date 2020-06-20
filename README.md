@@ -11,14 +11,11 @@ Just the usual
 ## Running
 
 ```
-cd raku-some-distro
+raku -Ilib -MDistribution::Dependencies -e 'say explore "../raku-some-distro
+"' cd raku-some-distro
 
 
 ```
-
-## See also
-
-<-- Related stuff -->
 
 ## License
 <-- 
