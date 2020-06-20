@@ -8,9 +8,12 @@ unit module Distribution::Dependencies;
             for $meta6<provides>.values -> $p {
                 my @lines = "$dir/$p".IO.lines.grep(/^^ \s* ["use" | "need"]/);
                 my $script = %?RESOURCES<explorer.p6>
-                        ?? %?RESOURCES<explorer.p6>  !! "resources/explorer.p6";
-                my $output = shell $script ~  ' "' ~ @lines.join("; ") ~ '"',
-                        :out;
+                        ?? %?RESOURCES<explorer.p6>.relative !!
+                        "resources/explorer.p6";
+                note $*EXECUTABLE;
+                my $output = shell "$*EXECUTABLE $script" ~  ' "' ~
+                        @lines.join("; ") ~
+'"', :out;
                 my $result = $output.out.slurp: :close;
                 return from-json $result;
             }
