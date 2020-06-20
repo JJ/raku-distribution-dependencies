@@ -10,3 +10,4 @@
 # Comma
 workspace.xml
 *.iml
+.idea
